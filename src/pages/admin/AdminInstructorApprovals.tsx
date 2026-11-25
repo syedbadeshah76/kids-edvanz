@@ -59,7 +59,7 @@ const AdminInstructorApprovals = () => {
   const [statistics, setStatistics] = useState<InstructorStatistics | null>(null);
   const [instructors, setInstructors] = useState<InstructorApprovalUser[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const PAGE_SIZE = 5;
+  const PAGE_SIZE = 10;
   const [loadingStats, setLoadingStats] = useState(true);
   const [loadingList, setLoadingList] = useState(true);
   const [listError, setListError] = useState<string>("");
