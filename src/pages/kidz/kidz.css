@@ -1,0 +1,134 @@
+/* Scoped Edvanz Kidz Design System Styles & Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap');
+
+.kidz-portal {
+  --radius: 1.25rem;
+
+  --background: #f8fafc;
+  --foreground: #1e293b;
+
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --primary-soft: #eff6ff;
+
+  --secondary: #f1f5f9;
+  --secondary-foreground: #334155;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --accent: #eff6ff;
+  --accent-foreground: #1d4ed8;
+
+  --grape: #7c3aed;
+  --grape-foreground: #ffffff;
+
+  --sun: #f59e0b;
+  --sun-foreground: #78350f;
+
+  --mint: #10b981;
+  --mint-foreground: #065f46;
+
+  --sky: #3b82f6;
+  --sky-foreground: #1e40af;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+
+  --sidebar: #ffffff;
+  --sidebar-background: #ffffff;
+  --sidebar-foreground: #475569;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eff6ff;
+  --sidebar-accent-foreground: #2563eb;
+  --sidebar-border: #f1f5f9;
+  --sidebar-ring: #2563eb;
+
+  --quiz-ink: #4338ca;
+  --quiz-soft: #eef2ff;
+  --quiz-pop: #facc15;
+  --quiz-pop-soft: #fef9c3;
+
+  --gradient-hero: linear-gradient(135deg, #4353ff 0%, #6366f1 50%, #8b5cf6 100%);
+  --gradient-soft: linear-gradient(140deg, #ede9fe 0%, #e0e7ff 100%);
+  --shadow-card: 0 4px 12px -2px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
+  --shadow-pop: 0 12px 28px -8px rgba(37, 99, 235, 0.3);
+
+  font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+}
+
+.kidz-portal h1,
+.kidz-portal h2,
+.kidz-portal h3,
+.kidz-portal h4,
+.kidz-portal .font-display {
+  font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.bg-hero-gradient {
+  background-image: var(--gradient-hero, linear-gradient(135deg, #4353ff 0%, #6366f1 50%, #8b5cf6 100%));
+}
+
+.bg-soft-gradient {
+  background-image: var(--gradient-soft, linear-gradient(140deg, #ede9fe 0%, #e0e7ff 100%));
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card, 0 4px 12px -2px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03));
+}
+
+.shadow-pop {
+  box-shadow: var(--shadow-pop, 0 12px 28px -8px rgba(37, 99, 235, 0.3));
+}
+
+.card-surface {
+  background-color: var(--card, #ffffff);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-card, 0 4px 12px -2px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03));
+}
+
+.quiz-card-shadow {
+  box-shadow: 10px 10px 0 var(--quiz-ink, #4338ca);
+}
+
+.quiz-answer-shadow {
+  box-shadow: 0 6px 0 var(--quiz-ink, #4338ca);
+}
+
+@keyframes quiz-mascot-bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+@keyframes quiz-celebrate {
+  0% { transform: scale(0.85) rotate(-8deg); opacity: 0; }
+  70% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.animate-quiz-mascot {
+  animation: quiz-mascot-bob 3s ease-in-out infinite;
+}
+
+.animate-quiz-celebrate {
+  animation: quiz-celebrate 400ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-quiz-mascot,
+  .animate-quiz-celebrate {
+    animation: none;
+  }
+}
